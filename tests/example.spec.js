@@ -17,3 +17,10 @@ test('get started link', async ({ page }) => {
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
+
+
+//Local Project Folder - U. A
+
+//Local Repository - c "Initial commit"; c2 - "second commit"; c3
+
+//Remote Repository - push

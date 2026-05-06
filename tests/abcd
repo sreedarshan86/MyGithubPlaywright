@@ -1,1 +1,16 @@
 abcd
+
+
+Git Commands
+git status
+git pull
+git status
+git add <file name> or git add .
+git status
+git commit -m "Message"
+git push
+git checkout <branchname>
+
+git stash           - will move to a temporary location
+git pull
+git stash pop       - will take back the content from temporary location
