@@ -1,11 +1,12 @@
 name: Playwright Tests
 on:
   push:
-
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
   workflow_dispatch:
   schedule:
-    -cron: '59 23 * * 0-6'
-
+    -cron: '00 12 * * 0-6'
 jobs:
   test:
     timeout-minutes: 60
@@ -19,7 +20,7 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run Playwright tests
+    - name: Run Playwright tests --grep '@smoke'
       run: npx playwright test
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
